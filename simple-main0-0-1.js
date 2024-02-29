@@ -22,7 +22,7 @@ firebase.auth().onAuthStateChanged(user => {
                     adminProfileDiv.removeChild(adminProfileDiv.firstChild)
                 }
                 createDOMElement('img', 'patient-photo', adminData.profilePhoto, adminProfileDiv);
-                createDOMElement('div', 'patient-text', adminData.fullName, adminProfileDiv);
+                createDOMElement('div', 'text-light', adminData.fullName, adminProfileDiv);
 
             } else {
                 // User is not an admin, redirect them to the login page
