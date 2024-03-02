@@ -1,5 +1,3 @@
-
-
 const db = firebase.firestore();
 let defaultProfile = "https://firebasestorage.googleapis.com/v0/b/simple-1ccfd.appspot.com/o/Image%20copy.png?alt=media&token=bcd392b5-27c8-4e7e-9143-d384e9099a99"
 
@@ -26,15 +24,15 @@ firebase.auth().onAuthStateChanged(user => {
 
             } else {
                 // User is not an admin, redirect them to the login page
-                // window.location.href = "https://simple-admin-ios.webflow.io/login";
+                window.location.href = "https://simple-admin-ios.webflow.io/login";
             }
         }).catch(error => {
             console.error("Error checking admin status: ", error);
-            // window.location.href = "https://simple-admin-ios.webflow.io/login";
+            window.location.href = "https://simple-admin-ios.webflow.io/login";
         });
     } else {
         // No user is signed in, redirect them to the login page
-        // window.location.href = "https://simple-admin-ios.webflow.io/login";
+        window.location.href = "https://simple-admin-ios.webflow.io/login";
     }
 });
 
